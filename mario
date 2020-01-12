@@ -1,0 +1,46 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+    
+    //get interger between 1 and 8//
+{
+    int i = get_int("Height: ");
+    while(i < 1 || i > 8)
+    {
+    i = get_int("Height: ");
+    }
+    {
+        printf("Stored: %i\n", i);
+    }
+    
+    //Left aligned pyramid//
+    
+    int r,c;
+    int s = 1;
+           
+    for (r = 1; r <= i; r++){
+        
+        for(c = 1; c <= r; c++)
+        {          
+            printf("#");           
+        }
+        printf("\n");
+        }
+    
+    //right aligned pyramid//
+               
+    for (r = 1; r <= i; r++){
+        
+        for(s = i -1; s>=r; s--) 
+        {
+                printf(" ");                        
+        }          
+        for(c = 1; c <= r; c++)
+        {                           
+            printf("#");            
+        }
+            
+        printf("\n");       
+    }
+}
